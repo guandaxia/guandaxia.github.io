@@ -157,7 +157,8 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Laravel-admin导出excel文件" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Laravel-admin导出excel文件" class="article article-type-post "
+  itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -168,16 +169,16 @@
     </h1>
   
 
-        
-        <a href="/2018/04/25/Laravel-admin导出excel文件/" class="archive-article-date">
+          
+            <a href="/2018/04/25/Laravel-admin导出excel文件/" class="archive-article-date">
   	<time datetime="2018-04-25T02:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-25</time>
 </a>
-        
+              
       </header>
-    
-    <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
+        <div class="article-entry" itemprop="articleBody">
+          
+                    <blockquote>
 <p>laravel-admin 是一个可以快速帮你构建后台管理的工具，它提供的页面组件和表单元素等功能，能帮助你使用很少的代码就实现功能完善的后台管理功能。</p>
 </blockquote>
 <p>laravel-admin是一个基于<code>laravel</code>插件，可以帮助我们快速的构建后台管理系统。我们今天来介绍一下使用laravel-admin来导出excel文件，基于laravel-admin 1.5版本。</p>
@@ -217,13 +218,13 @@
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Excel::create(<span class="keyword">$this</span>-&gt;filename, <span class="function"><span class="keyword">function</span> <span class="params">($excel)</span></span>&#123;</span><br><span class="line">    $excel-&gt;sheet(<span class="string">'Shee1'</span>, <span class="function"><span class="keyword">function</span><span class="params">($sheet)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//设置宽度</span></span><br><span class="line">        $sheet-&gt;setWidth(<span class="keyword">array</span>(</span><br><span class="line">            <span class="string">'A'</span>     =&gt;  <span class="number">5</span>,</span><br><span class="line">            <span class="string">'B'</span>     =&gt;  <span class="number">12</span>,</span><br><span class="line">            ...</span><br><span class="line">        ));</span><br><span class="line">        $sheet-&gt;row(<span class="number">1</span>, <span class="keyword">$this</span>-&gt;title);</span><br><span class="line">        <span class="comment">// 这段逻辑是从表格数据中取出需要导出的字段</span></span><br><span class="line">        $rows = collect(<span class="keyword">$this</span>-&gt;getData())-&gt;map(<span class="function"><span class="keyword">function</span> <span class="params">($item)</span> </span>&#123;</span><br><span class="line">            $item = array_only($item, <span class="keyword">$this</span>-&gt;fields);</span><br><span class="line">            $row = [];</span><br><span class="line">            <span class="keyword">foreach</span> (<span class="keyword">$this</span>-&gt;fields <span class="keyword">as</span> $field) &#123;</span><br><span class="line">                $row[$field] = $item[$field];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> $row;</span><br><span class="line">        &#125;);</span><br><span class="line">        $sheet-&gt;rows($rows);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)-&gt;export(<span class="string">'xls'</span>);</span><br></pre></td></tr></table></figure>
 <h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>第一次写文章，写的内容比较简单，提供一种思路供大家参考。如果有错误的地方，欢迎大家支出，不吝赐教。</p>
 
-      
+                      
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+                        
+        </div>
+        <div class="article-info article-info-index">
+          
+              
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -235,12 +236,12 @@
 		</ul>
 	</div>
 
-      
+                
 
-      
+                  
 
-      
-        
+                      
+                        
 <div class="share-btn share-icons tooltip-left">
   <div class="tooltip tooltip-east">
     <span class="tooltip-item">
@@ -290,9 +291,9 @@
 </div>
 
 <div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+                          
+                            <div class="clearfix"></div>
+        </div>
   </div>
 </article>
 
@@ -307,8 +308,8 @@
   
 </nav>
 
-
-<aside class="wrap-side-operation">
+    
+      <aside class="wrap-side-operation">
     <div class="mod-side-operation">
         
         <div class="jump-container" id="js-jump-container" style="display:none;">
@@ -325,17 +326,17 @@
 </aside>
 
 
+        
+          
 
-  
-  
-  
+                
 
-  
+                      
 
-  
+                            
 
-  
-  <div id="gitment-ctn"></div> 
+                                
+                                  <div id="gitment-ctn"></div> 
 <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
@@ -350,8 +351,8 @@ var gitment = new Gitment({
 })
 gitment.render('gitment-ctn')
 </script>
-  
-
+                                    
+                                      
 
           </div>
         </div>
@@ -359,15 +360,24 @@ gitment.render('gitment-ctn')
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2018 guansixu
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
+      <div class="footer-left">
+        &copy;
+        2018
+          guansixu
+      </div>
+      <div class="footer-right">
+        <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+        <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      </div>
+      <div>
+        <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span id="busuanzi_container_site_pv">本站总访问量
+          <span id="busuanzi_value_site_pv"></span>次</span>
+      </div>
     </div>
   </div>
 </footer>
+
     </div>
     <script>
 	var yiliaConfig = {
